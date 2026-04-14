@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MASSAGE SKILL</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  margin-top:50px;
+  background:#fff4e8;
+}
+
+.btn-neon {
+  background: linear-gradient(95deg, #ff8c42, #ff5e00);
+  color:white;
+  padding:15px 25px;
+  border-radius:50px;
+  font-weight:800;
+  cursor:pointer;
+  border:none;
+}
+
+.floating-cart {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#ff5e00;
+  color:white;
+  padding:12px 20px;
+  border-radius:50px;
+  z-index:999;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 Sticky Bar -->
+<div style="position:fixed; top:0; left:0; width:100%; background:#ff3b3b; color:white; text-align:center; padding:10px; font-weight:800; z-index:9999;">
+⚡ LIMITED OFFER: ₹199 Only | Ending Soon
+</div>
+
+<div style="text-align:center; padding:20px;">
+
+<h1>₹40,000–₹60,000 महीना कमाने का Proven तरीका</h1>
+
+<button class="btn-neon" onclick="goToPayment()">
+अभी खरीदें ₹199
+</button>
+
+<!-- Trust -->
+<div style="margin-top:15px;">
+✅ Secure Payment | ⭐ 50,000+ Users | 📞 Instant Access
+</div>
+
+<!-- Guarantee -->
+<div style="background:#e6ffed; padding:15px; margin-top:15px;">
+🛡️ 30 Days Full Refund Guarantee
+</div>
+
+</div>
+
+<!-- Floating Button -->
+<div class="floating-cart" onclick="goToPayment()">
+Buy Now ₹199
+</div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+style="position:fixed; bottom:90px; right:20px; background:#25D366; color:white; padding:12px 20px; border-radius:50px;">
+Chat
+</a>
+
+<!-- Fake Popup -->
+<div id="popup" style="position:fixed; bottom:20px; left:20px; background:white; padding:10px; display:none;">
+🔥 <span id="buyer"></span> purchased
+</div>
+
+<script>
+
+function goToPayment(){
+  window.open("https://superprofile.bio/vp/697990ec8a516100149d5ac9","_blank");
+}
+
+// Fake Sales
+const names=["Rahul","Amit","Rohit","Suresh"];
+setInterval(()=>{
+  let popup=document.getElementById("popup");
+  let name=names[Math.floor(Math.random()*names.length)];
+  document.getElementById("buyer").innerText=name;
+  popup.style.display="block";
+  setTimeout(()=>popup.style.display="none",3000);
+},7000);
+
+// Exit popup
+document.addEventListener("mouseleave",function(e){
+  if(e.clientY<0){
+    alert("Wait! Offer ending soon 😱");
+  }
+});
+
+</script>
+
+</body>
+</html>
